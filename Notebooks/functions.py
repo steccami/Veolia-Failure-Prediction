@@ -7,10 +7,12 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 
 def load():
-    path=""
-    train=pd.read_csv("train.csv")
-    test=pd.read_csv("test.csv")
-    target=pd.read_csv("train_label.csv",delimiter=";")
+    
+    path="/home/adri/Desktop/Veolia presentation/Data/"
+    
+    train=pd.read_csv(path+"train.csv")
+    test=pd.read_csv(path+"test.csv")
+    target=pd.read_csv(path+"train_label.csv",delimiter=";")
     
     #drop ID
     train.drop(["Id"],axis=1,inplace=True)
